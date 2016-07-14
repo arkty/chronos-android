@@ -1,6 +1,6 @@
 package com.redmadrobot.chronos;
 
-import org.jetbrains.annotations.Contract;
+
 
 import android.support.annotation.NonNull;
 
@@ -33,7 +33,7 @@ final class ChronosService {
     }
 
     @NonNull
-    @Contract(pure = true)
+
     static ChronosService getInstance() {
         return INSTANCE;
     }
@@ -65,7 +65,7 @@ final class ChronosService {
      * @return an empty OperationResult without business-logic content
      */
     @NonNull
-    @Contract(pure = true)
+
     private <Output> ChronosOperationResult<Output> createEmptyResult(
             @NonNull final ChronosOperation<Output> operation, final boolean broadcastResult) {
         final ChronosOperationResult<Output> operationResult;

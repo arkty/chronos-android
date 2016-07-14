@@ -3,7 +3,7 @@ package com.redmadrobot.chronos.gui;
 import com.redmadrobot.chronos.Chronos;
 import com.redmadrobot.chronos.ChronosOperation;
 
-import org.jetbrains.annotations.Contract;
+
 
 import android.support.annotation.NonNull;
 
@@ -125,7 +125,7 @@ public interface ChronosConnectorWrapper {
      * @param id an id of the operation launch
      * @return {@code true} if the operation is running, {@code false} otherwise
      */
-    @Contract(pure = true)
+
     boolean isOperationRunning(final int id);
 
     /**
@@ -135,6 +135,6 @@ public interface ChronosConnectorWrapper {
      * @return {@code true} if the operation is running, {@code false} if it is not running, or
      * there was no operation launch with the tag at all
      */
-    @Contract(pure = true)
+
     boolean isOperationRunning(@NonNull final String tag);
 }

@@ -1,6 +1,6 @@
 package com.redmadrobot.chronos;
 
-import org.jetbrains.annotations.Contract;
+
 
 import android.support.annotation.NonNull;
 
@@ -27,7 +27,7 @@ final class ChronosListenerManager {
     }
 
     @NonNull
-    @Contract(pure = true)
+
     public static ChronosListenerManager getInstance() {
         return INSTANCE;
     }

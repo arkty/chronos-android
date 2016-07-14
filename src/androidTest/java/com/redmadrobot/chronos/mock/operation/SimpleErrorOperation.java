@@ -4,7 +4,7 @@ import com.redmadrobot.chronos.ChronosOperation;
 import com.redmadrobot.chronos.ChronosOperationResult;
 import com.redmadrobot.chronos.TestSettings;
 
-import org.jetbrains.annotations.Contract;
+
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

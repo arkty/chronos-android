@@ -1,6 +1,6 @@
 package com.redmadrobot.chronos;
 
-import org.jetbrains.annotations.Contract;
+
 
 import android.support.annotation.NonNull;
 
@@ -30,7 +30,7 @@ final class RunningOperationStorage {
     }
 
     @NonNull
-    @Contract(pure = true)
+
     static RunningOperationStorage getInstance() {
         return INSTANCE;
     }
@@ -113,7 +113,7 @@ final class RunningOperationStorage {
      * @param id the unique id of operations' launch
      * @return {@code true} if the operation is still running, {@code false} otherwise
      */
-    @Contract(pure = true)
+
     synchronized final boolean isOperationRunning(final int id) {
         return mRunningOperations.containsKey(id);
     }
@@ -124,7 +124,7 @@ final class RunningOperationStorage {
      * @param id the unique id of operations' launch
      * @return {@code true} if the operation was cancelled, {@code false} otherwise
      */
-    @Contract(pure = true)
+
     synchronized final boolean isOperationCancelled(final int id) {
         return mCancelledOperations.contains(Integer.valueOf(id));
     }

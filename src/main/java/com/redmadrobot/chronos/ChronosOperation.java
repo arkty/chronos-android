@@ -1,7 +1,7 @@
 package com.redmadrobot.chronos;
 
 
-import org.jetbrains.annotations.Contract;
+
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -44,7 +44,7 @@ public abstract class ChronosOperation<Output> {
      * @return OperationResult subclass, that will be created after the operation is complete.
      */
     @NonNull
-    @Contract(pure = true)
+
     public abstract Class<? extends ChronosOperationResult<Output>> getResultClass();
 
     /**
@@ -55,7 +55,7 @@ public abstract class ChronosOperation<Output> {
      * @see ChronosListener#cancel(String, boolean)
      * @see Chronos#cancelAll(boolean)
      */
-    @Contract(pure = true)
+
     public final boolean isCancelled() {
         return mIsCancelled.get();
     }

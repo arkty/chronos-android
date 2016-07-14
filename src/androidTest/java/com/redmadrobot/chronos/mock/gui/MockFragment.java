@@ -4,7 +4,7 @@ import com.redmadrobot.chronos.Chronos;
 import com.redmadrobot.chronos.ChronosConnector;
 import com.redmadrobot.chronos.ChronosOperation;
 
-import org.jetbrains.annotations.Contract;
+
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -22,7 +22,7 @@ public abstract class MockFragment {
     private MockActivity mMockActivity;
 
     @Nullable
-    @Contract(pure = true)
+
     public final MockActivity getMockActivity() {
         return mMockActivity;
     }
