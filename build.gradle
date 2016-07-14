@@ -2,22 +2,41 @@
 
 buildscript {
     repositories {
-        maven {
+        mavenCentral()
+	maven {
             url  "http://dl.bintray.com/rmr/maven"
         }
-        jcenter()
+	jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:2.1.0'
     }
 }
+apply plugin: 'com.android.library'
+repositories {
+	mavenCentral()
+	jcenter()
+}
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
 
-allprojects {
-    repositories {
-        jcenter()
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.7"
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-annotations:23.4.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
 }
